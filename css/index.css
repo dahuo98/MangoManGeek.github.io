@@ -589,10 +589,54 @@
 	
 }
 
+.text_link{
+	/* over write previous link rules, this is for inline text links*/
+	display: inline-block !important;
+}
+
 @media only screen and (max-width: 1000px) {
     #intro_pic {
         display: none;
     }
 }
+
+
+/*********************************************************************************/
+/* winlab project button link CSS                                                */
+/*********************************************************************************/
+
+.project_link_wrap {
+
+	text-align: center;
+	display: inline-block;
+}
+
+a.project_link {
+  font-family: Arial, sans-serif;
+	font-weight: bold;
+	font-size: 14px;
+  
+  
+	-webkit-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+	-moz-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+	-ms-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+	-o-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+	transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+	display: block;
+	margin: 10px auto;
+	max-width: 180px;
+	text-decoration: none;
+	border-radius: 4px;
+	padding: 20px 30px;
+
+	color: rgba(30, 22, 54, 0.6);
+	box-shadow: rgba(30, 22, 54, 0.4) 0 0px 0px 2px inset;
+}
+
+a.project_link:hover {
+	color: rgba(255, 255, 255, 0.85);
+	box-shadow: rgba(30, 22, 54, 0.7) 0 0px 0px 40px inset;
+}
+
 
 
