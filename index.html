@@ -14,8 +14,37 @@
 
 <!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
 
+<!-- Slide Show links starts here -->
+<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick//slick-theme.css"/>
+<!-- Slide Show links ends here -->
+
 </head>
 <body>
+
+<!-- - - - - - - - - - slide show js starts here - - - - - - - -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+      $('.slideshow').slick({
+      	autoplay: true,
+      	autoplaySpeed: 5000,
+      	arrows: false,
+      	dots: true,
+      	adaptiveHeight: true
+
+
+      });
+    });
+</script>
+
+
+<!-- - - - - - - slide show js ends here - - - - - - -->
+
+
 <div id="page" class="container">
 	<div id="header">
 		<div id="logo">
@@ -53,6 +82,24 @@
 				<!--<span class="byline">Integer sit amet aliquet pretium</span>-->
 			</div>
 			<ul class="style1">
+
+				<li class="first">
+					<p class="date"><a href="#">SEPT<b>5</b></a><br>2018</p>
+					<h3>Started Research Project With <a href="http://gerard.demelo.org/" class="text_link" target="_blank">Dr. Gerard de Melo</a></h3>
+					<p><a href="html/research.html">Project Title: Extending Universal Semantic Tagging. <br> 
+						Project Objective: To produce a large database that provides semantic properties of words.</a></p>
+				</li>
+
+				<li class="first">
+					<p class="date" style="height:350px;"><a href="#">AUG<b>16</b></a><br>2018</p>
+					<h3><a href="http://www.orbit-lab.org/wiki/Other/Summer/2018/OH2018" class="text_link" target="_blank">WINLAB research project finished with open house event!</a></h3>
+					<br>
+					<div class="slideshow" style="width: 600px">
+    					<img src="file/winlab/openhouse.jpg" >
+						<img src="file/winlab/poster_pic.png" >
+  					</div>
+				</li>
+
 				<li class="first">
 					<p class="date"><a href="#">May<b>29</b></a><br>2018</p>
 					<h3>Summer Research Internship at <a href="http://www.orbit-lab.org/wiki/Other/Summer#a2018WINLABSummerInternship" style="display:inline-block;">WINLAB</a> Starts</h3>
