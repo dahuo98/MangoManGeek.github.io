@@ -598,6 +598,10 @@
     #intro_pic {
         display: none;
     }
+	
+	.date{
+		display: none;
+	}
 }
 
 
