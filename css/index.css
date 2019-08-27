@@ -576,6 +576,14 @@
 /* My CSS start from here                                                        */
 /*********************************************************************************/
 
+.bio{
+	text-align: left;
+	font-family: sans-serif;
+	line-height: 1.5;
+	font-size: 110%;
+	margin-bottom: 40px;
+}
+
 #intro_pic{
 	display:inline-block;
 	margin: auto 40px;
