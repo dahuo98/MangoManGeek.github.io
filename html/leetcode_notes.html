@@ -14,9 +14,33 @@
 <body>
 <h1>Leetcode Notes</h1>
 <div>
+	<h3>Useful Python Modules</h3>
+	<ul>
+		<li><b>bisect</b> -- maintaining a list in sorted order without having to sort the list after each insertion
+		<ul>
+			<li>bisect.insort(list, target) inserts target in list while maintaining the list sorted, <i>in O(n) time</i> since insert into list takes linear time to shift elements</li>
+		</ul></li>
+	</ul>
+
+	<h3>Binary Search</h3>
+	<ul>
+		<li><a href="code/binarySearch.py">[Sample Binary Search Code]</a></li>
+
+		<li>Use <b style="color: red">mid = l + (r - l) // 2</b> to calculate for mid to <b>Avoid Overflow problem when l and r are bid numbers</b></li>
+
+		<li>When try to decide whether return r or return l if target does not exist, analyze that:<br>
+		When l == r:
+		<ul>
+			<li>if arr[mid] > target, r moves left, which one do you need to return?</li>
+			<li>if arr[mid] < target, l moves right, which one do you need to return?</li>
+		</ul></li>
+	</ul>
+
 	<h3>Binary Search Tree</h3>
 	<ul>
 		<li>When solving BST related questions, keep in mind that <b>The range of the value of a particular node is bounded by [lower, upper]</b> depends on the tree's previous structure. <b>YOU CANNOT SIMPLY ASSUME if node.val > root.val { append node to the right}</b>. It may has to be appended to the parent's right side</li>
+
+		<li>Consider if you can solve it with <b>In Order Traversal</b></li>
 
 		<li>Interative Inorder Traversal <a href="https://leetcode.com/problems/binary-tree-inorder-traversal/">[Leetcode 94]</a></li>
 
@@ -25,8 +49,26 @@
 		<a href="https://leetcode.com/problems/recover-binary-search-tree/">[Leetcode 99]</a>
 		<a href="https://www.youtube.com/watch?v=wGXB9OWhPTg">[YouTube Explanation]</a>
 		<a href="https://www.geeksforgeeks.org/inorder-tree-traversal-without-recursion-and-without-stack/">[Geeks for Geeks]</a></li>
+
+		<li><b>Build Balanced BST from sorted list</b>: Use binary search and recursion to solve this problem --> use arr[mid] as root, build left part of array as left child, build right part of array as right child <br>
+		<a href="code/build_BST_from_sorted_list.py">[Sample Code]</a> 
+		<a href="https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/">[Leetcode 109]</a>
+		<a href="https://leetcode.com/problems/balance-a-binary-search-tree/">[Leetcode 1382]</a></li>
+
+		<li>AVL Trees <a href="https://www.youtube.com/watch?v=FNeL18KsWPc">[MIT Open Course]</a></li>
+
+		<li>Change a BST into a LinekedList with only right child / Vine <a href="https://leetcode.com/problems/increasing-order-search-tree/">[Leetcode 897]</a>
+		<ul>
+			<li>By doing inorder traversal and construct tree from inorder traversal</li>
+			<li>by keep performing right rotations <a href="code/BST2LinkedList_using_rightRotations.py">[Sample Code]</a></li>
+		</ul></li>
+
+		<li>Use predecessor and successor to find closest value to a tree node in BST
+		<a href="https://leetcode.com/problems/closest-binary-search-tree-value-ii/">[Leetcode 272]</a> 
+		<a href="code/leetcode272.py">[Leetcode 272 Solution]</a></li>
 		
 	</ul>
+
 	<h3>Array</h3>
 	<ul>
 		<li>Sort an alomost sorted array (two elements are swaped) <b>Be Careful When Two Adjacent Element Are Swaped</b><a href="https://leetcode.com/problems/recover-binary-search-tree/">[Leetcode 99]</a></li>
