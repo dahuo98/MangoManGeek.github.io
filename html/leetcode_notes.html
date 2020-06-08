@@ -77,6 +77,20 @@
 		<span style="color: red">condition: range of array element must be bounded by [lower, higher] which we can use as size of bucket</span></b>
 		<a href="https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/">[Leetcode 1365]</a></li>
 	</ul>
+
+	<h3>Greedy</h3>
+	<ul>
+		<li>When you get stuck on greedy related problems -- Think if you can find a solution if you process the input <b style="color: red">in reverse order</b></li>
+	</ul>
+
+	<h3>Combinations</h3>
+	<ul>
+		<li>Combinations: Order Does Not Matter</li>
+		<li>When Trying to find possible combinations, fix one type of element first, then add on other types of elements to avoid duplicates (permutaiton) <br>
+		Example: When finding combinations makes up 3 with {1, 2}, First find combinations using only 1s, then consider 2s. So only {111, 12} returned instead of {111, 12, 21}.<br>
+		In other words, after finding all combinations using only 1s (T[amount - 1], where T[i] = combinations to make amount i using only 1s), we do another iteration only append 2s to previous found combinations (T[i-2], , where T[i] = combinations to make amount i using only 1s and 2s). By doing so, we make sure in our combinations, 2s appears only after 1s, so we can avoid the duplicates (only {1, 2} will show in our results, {2, 1} will not be considered) </li>
+		<a href="https://leetcode.com/problems/coin-change-2/">[Leetcode 518]</a>
+	</ul>
 </div>
 </body>
 </html>
