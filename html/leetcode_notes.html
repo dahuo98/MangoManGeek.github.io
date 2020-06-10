@@ -76,11 +76,34 @@
 		<li>Count Numbers Smaller Than the Current Number / Count of Smaller Numbers After Self :	<b>An O(n) way to achieve this is to use bucket sort, if array elements are integers. bucket[i] = count of i. Then number of elements smaller than number i is sum(bucket[:i]) <br>
 		<span style="color: red">condition: range of array element must be bounded by [lower, higher] which we can use as size of bucket</span></b>
 		<a href="https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/">[Leetcode 1365]</a></li>
+
+		<li>For problems related to <b><span style="color:red">Circular Array</span> (solution may be subarray / sequence which connects tail and head of array)</b>, One possible way to solve it is <b style="color: red">Keep the Sum of Difference while you process the array</b>, that is, you keep how much work do you need to have to get to current point from start of the array. So you don't have to visit the array more than once to find solutions that contains both head and tail of array. <br>
+		<a href="https://leetcode.com/problems/gas-station/">[Leetcode 134]</a> 
+		<a href="code/134_gas_station.py">[Leetcode 134 Solution]</a>
+		<a href="https://www.youtube.com/watch?v=nTKdYm_5-ZY&list=PLupD_xFct8mETlGFlLVrwbLwcxczbgWRM&index=8&t=0s">[134 Youtube Explaination]</a></li>
+
+		<li>When solving problems which <b>requires to fullfill conditions which contain both condition flows from left to right and right to left</b>, see if you can solve it by <b style="color:red">solving for a solution fullfill only the condition flows from left to right, and solving for a solution fullfill only the condition from right to left, then combine both solutions depends on the requirements and get the final solution.</b> <br>
+		<a href="https://leetcode.com/problems/candy/">[Leetcode 135]</a></li>
 	</ul>
 
 	<h3>Greedy</h3>
 	<ul>
+		<li>Greedy problems usually look like "Find minimum number of something to do something" or "Find maximum number of something to fit in some conditions". <br>
+
+		The idea of greedy algorithm is to pick locally optimal move at each step, that will lead to globally optimal solution.</li>
+
 		<li>When you get stuck on greedy related problems -- Think if you can find a solution if you process the input <b style="color: red">in reverse order</b></li>
+
+		<li><b>Think What Kind of Condition / Situation will <span style="color: red">ALWAYS LEAD TO THE OPTIMAL SOLUTION</span></b></li>
+
+		<li>When you don't have enough information to do greedy in one-pass, <b style="color:red">think if you can have enough information by keep some variables along the way</b>
+		<a href="https://leetcode.com/problems/jump-game-ii/">[Leetcode 45]</a></li>
+
+		<li>When solving problems which <b>requires to fullfill conditions which contain both condition flows from left to right and right to left</b>, see if you can solve it by <b style="color:red">solving for a solution fullfill only the condition flows from left to right, and solving for a solution fullfill only the condition from right to left, then combine both solutions depends on the requirements and get the final solution.</b> <br>
+		<a href="https://leetcode.com/problems/candy/">[Leetcode 135]</a></li>
+
+		<li><a href="https://leetcode.com/problems/jump-game/">[Leetcode 55. Jump Game]</a>
+		<a href="code/55_jump_game.py">[Leetcode 55 My Solution] </a>(different from standard solution)</li>
 	</ul>
 
 	<h3>Combinations</h3>
@@ -90,6 +113,25 @@
 		Example: When finding combinations makes up 3 with {1, 2}, First find combinations using only 1s, then consider 2s. So only {111, 12} returned instead of {111, 12, 21}.<br>
 		In other words, after finding all combinations using only 1s (T[amount - 1], where T[i] = combinations to make amount i using only 1s), we do another iteration only append 2s to previous found combinations (T[i-2], , where T[i] = combinations to make amount i using only 1s and 2s). By doing so, we make sure in our combinations, 2s appears only after 1s, so we can avoid the duplicates (only {1, 2} will show in our results, {2, 1} will not be considered) </li>
 		<a href="https://leetcode.com/problems/coin-change-2/">[Leetcode 518]</a>
+	</ul>
+
+	<h3>Bitwise Operators</h3>
+	<ul>
+		<li><b>Isolate the right most bit which = 1 in number x: <span style="color:red">x &amp; (-x)</span></b> <br>
+		-x = flip all bits in x then plus 1, x &amp; (-x) sets everything to 0 except for the right most bit which = 1</li>
+
+		<li><b>Turn off the right most bit which = 1 in number x: <span style="color:red">x &amp; (x - 1)</span></b><br>
+		x-1 will flip the rightmost bit which = 1 and all bits in front of it, so by doing x &amp; (x - 1), we set the right most bit which = 1 to 0, Thus, we turned off the right most 1-bit</li>
+
+		<li><a href="https://leetcode.com/problems/power-of-two/">[Leetcode 231 Power of Two]</a></li>
+	</ul>
+
+	<h3>Parentheses</h3>
+	<ul>
+		<li>Use stack to match parentheses</li>
+
+		<li>对于valid parentheses string来说，相同深度的开括号"("奇偶性相同， 相同深度的关括号")"奇偶性也相同
+		<a href="https://leetcode.com/problems/maximum-nesting-depth-of-two-valid-parentheses-strings/">[Leetcode 1111]</a></li>
 	</ul>
 </div>
 </body>
