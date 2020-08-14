@@ -158,6 +158,27 @@
 
 		<li>Consider if you can solve it with <b>In Order Traversal</b></li>
 
+		<li><a href="https://leetcode.com/problems/inorder-successor-in-bst/">[Leetcode 285 Inorder Successor in BST]</a>
+			<ul>
+				<li>Smart Approach: <b>Use The Property of BST: Everything on the left < root, Everything on the right > root.</b>
+				<ul>
+					<li>if root > target: update successor=root, go to left. <br>
+						Since everything we encounter after this will be < successor, so we don't need to check root < successor when update successor=root</li>
+					<li>if root < target: go to right</li>
+					<li>return successor when reaches end of tree</li>
+				</ul>
+				</li>
+
+				<li>Standard Approach:	Search for target and find successor by going one node to the right and all the way to the left
+				<ol>
+					<li>When search for target, keep track of the smallest parent that is also > target</li>
+					<li>if target has a right child, go one node to the right and all the way to the left, return the last node before reaching end of tree</li>
+					<li>else, return the parent we recorded from step 1</li>
+				</ol>
+				</li>
+			</ul>
+		</li>
+
 		<li>Interative Inorder Traversal <a href="https://leetcode.com/problems/binary-tree-inorder-traversal/">[Leetcode 94]</a></li>
 
 		<li>Morris Inorder Traversal -- O(n) time and <b>O(1) space</b> 
