@@ -283,6 +283,16 @@
 		x-1 will flip the rightmost bit which = 1 and all bits in front of it, so by doing x &amp; (x - 1), we set the right most bit which = 1 to 0, Thus, we turned off the right most 1-bit</li>
 
 		<li><a href="https://leetcode.com/problems/power-of-two/">[Leetcode 231 Power of Two]</a></li>
+
+		<li><b>result of XOR from 1 to n (1 xor 2 xor ... xor n) follows a particular pattern:</b>
+			<ul>
+				<li>if n % 4 == 0: result = n</li>
+				<li>if n % 4 == 1: result = 1</li>
+				<li>if n % 4 == 2: result = n+1</li>
+				<li>if n % 4 == 3: result = 0</li>
+			</ul>
+			<a href="./code/xor_from_one_to_n.py">[sample code]</a>
+		</li>
 	</ul>
 
 	<h3 id="parenthese">Parentheses</h3>
